@@ -3,7 +3,7 @@ import ctypes, inspect
 import threading
 from threading import Event
 
-from ..LogUtils import Logger
+from ..logutil import Logger
 
 class TaskTerminator:
 

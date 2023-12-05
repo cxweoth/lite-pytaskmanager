@@ -6,7 +6,7 @@ from .TaskTimer import TaskTimer
 from .TaskResult import TaskResult
 from .TaskTerminator import TaskTerminator
 
-from ..LogUtils import Logger
+from ..logutil import Logger
 
 
 class Task:
