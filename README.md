@@ -41,8 +41,8 @@ scheduler.every().wednesday.at("13:15").do(job)
 scheduler.run()
 ```
 
-For more detailed usage, please refer to the [documentation]().
+For more detailed usage, please refer to the [documentation (TBD)]().
 
 ## Contributing
-Contributions to taskmanager are welcome! Please refer to the [contributing guidelines]() for more information.
+Contributions to taskmanager are welcome! Please refer to the [contributing guidelines (TBD)]() for more information.
 
