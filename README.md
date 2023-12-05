@@ -26,20 +26,33 @@ pip install lite-pytaskmanager
 Here's a quick start example of how to use lite-pytaskmanager:
 
 ```python
-from lite-pytaskmanager import Scheduler
+import os
+from threading import Event
+from lite-pytaskmanager import Manager, TimePlan, Timeout, Logger
 
-# Create a new scheduler instance
-scheduler = Scheduler()
+def period_func(terminate_event:Event):
+    print('period_func')
+    return True, None
 
-# Schedule your tasks
-scheduler.every(10).minutes.do(job)
-scheduler.every().hour.do(job)
-scheduler.every().day.at("10:30").do(job)
-scheduler.every().monday.do(job)
-scheduler.every().wednesday.at("13:15").do(job)
+def daily_point_func(terminate_event:Event):
+    print('daily_point_func')
+    return True, None
 
-# Start the scheduler
-scheduler.run()
+def weekly_point_func(terminate_event:Event):
+    print('weekly_point_func')
+    return True, None
+
+# Create a new manager instance
+manager = Manager(manager_name='taskmanager')
+manager.enable_physical_logging(".")
+
+# Add tasks
+manager.add_task('period_func', period_func, TimePlan.create_interval_schedule(min=10), Timeout(hr=1))
+manager.add_task('daily_point_func', daily_point_func, TimePlan.create_daily_schedule("22:00"), Timeout(hr=1))
+manager.add_task('weekly_point_func', weekly_point_func, TimePlan.create_weekly_schedule(saturday=["22:00"]), Timeout(hr=1))
+
+# Start the manager
+manager.start()
 ```
 
 For more detailed usage, please refer to the [documentation (TBD)]().
