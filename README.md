@@ -27,7 +27,7 @@ Here's a quick start example of how to use lite-pytaskmanager:
 
 ```python
 from threading import Event
-from lite-pytaskmanager import Manager, TimePlan, Timeout
+from taskmanager import Manager, TimePlan, Timeout
 
 def period_func(terminate_event:Event):
     print('period_func')
