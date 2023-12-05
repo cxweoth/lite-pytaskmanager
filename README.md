@@ -26,9 +26,8 @@ pip install lite-pytaskmanager
 Here's a quick start example of how to use lite-pytaskmanager:
 
 ```python
-import os
 from threading import Event
-from lite-pytaskmanager import Manager, TimePlan, Timeout, Logger
+from lite-pytaskmanager import Manager, TimePlan, Timeout
 
 def period_func(terminate_event:Event):
     print('period_func')
