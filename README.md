@@ -1,8 +1,8 @@
-# taskmanager
+# lite-pytaskmanager
 
 **A Versatile Task Scheduling and Lifecycle Management Library**
 
-taskmanager is a robust and versatile Python library designed for efficient task scheduling and lifecycle management across multiple platforms. Worked for both Windows and Linux systems, and without the need for heavy external dependencies or specialized setups.
+lite-pytaskmanager is a robust and versatile Python library designed for efficient task scheduling and lifecycle management across multiple platforms. Worked for both Windows and Linux systems, and without the need for heavy external dependencies or specialized setups.
 
 ## Key Features
 
@@ -19,14 +19,14 @@ taskmanager is a robust and versatile Python library designed for efficient task
 ## Installation
 
 ```bash
-pip install taskmanager
+pip install lite-pytaskmanager
 ```
 
 ## Usage
-Here's a quick start example of how to use taskmanager:
+Here's a quick start example of how to use lite-pytaskmanager:
 
 ```python
-from taskmanager import Scheduler
+from lite-pytaskmanager import Scheduler
 
 # Create a new scheduler instance
 scheduler = Scheduler()
@@ -45,5 +45,5 @@ scheduler.run()
 For more detailed usage, please refer to the [documentation (TBD)]().
 
 ## Contributing
-Contributions to taskmanager are welcome! Please refer to the [contributing guidelines (TBD)]() for more information.
+Contributions to lite-pytaskmanager are welcome! Please refer to the [contributing guidelines (TBD)]() for more information.
 
