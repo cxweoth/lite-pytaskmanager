@@ -1,8 +1,8 @@
 # taskmanager
 
-A Versatile Task Scheduling and Lifecycle Management Library
+** A Versatile Task Scheduling and Lifecycle Management Library **
 
-TaskManager is a robust and versatile Python library designed for efficient task scheduling and lifecycle management across multiple platforms. Optimized for both Windows and Linux systems, it offers seamless performance even in environments with limited computational resources, without the need for heavy external dependencies or specialized setups.
+taskmanager is a robust and versatile Python library designed for efficient task scheduling and lifecycle management across multiple platforms. Worked for both Windows and Linux systems, and without the need for heavy external dependencies or specialized setups.
 
 ## Key Features
 
@@ -12,8 +12,6 @@ TaskManager is a robust and versatile Python library designed for efficient task
 
 - **Automatic Logging**: Features automatic logging capability, allowing users to specify the path for storing logs, crucial for tracking and analyzing system operations.
 
-- **Lightweight and User-Friendly**: Designed with a focus on user experience and system efficiency, ensuring smooth operation on less powerful systems.
-
 - **Cross-Platform Compatibility**: Delivers consistent performance and user experience on both Windows and Linux operating systems.
 
 ## Installation
@@ -21,6 +19,7 @@ TaskManager is a robust and versatile Python library designed for efficient task
 ```bash
 pip install taskmanager
 ```
+
 ## Usage
 Here's a quick start example of how to use taskmanager:
 
