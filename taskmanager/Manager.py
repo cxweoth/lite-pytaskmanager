@@ -157,7 +157,6 @@ class Manager:
         self._task_scheduler.run_pending()
 
     def _manage_tasks(self):
-        remove_ls = []
         for task_name, task in self._task_dict.items():
             if task.is_running:
                 self._handle_running_state(task)                
@@ -169,11 +168,6 @@ class Manager:
                 self._handle_terminated_state(task)
             elif task.is_killed:
                 self._handle_killed_state(task)
-                remove_ls.append(task_name)
-
-        for task_name in remove_ls:
-            del self._task_dict[task_name]               
-            self._logger.critical(f"{self._log_title} remove task: {task_name} from manager: {self._manager_name}, remained tasks: {list(self._task_dict.keys())}")
 
     def _handle_running_state(self, task):
         if task.is_timeout:
